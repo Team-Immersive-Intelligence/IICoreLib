@@ -6,6 +6,11 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+	embed
+}
+configurations.implementation.extendsFrom(configurations.embed)
+
 sourceSets {
 	main
 	test
@@ -169,5 +174,11 @@ jar {
 		if (mkxBool('use_access_transformer', false))
 			attributesMap['FMLAT'] = mkxList('access_transformer_locations').join(' ')
 		attributes(attributesMap)
+	}
+
+	from {
+		configurations.embed.collect {
+			it.isDirectory() ? it : zipTree(it)
+		}
 	}
 }

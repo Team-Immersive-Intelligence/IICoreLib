@@ -18,7 +18,7 @@ plugins {
 	id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
-rootProject.name = 'IEAddon'
+rootProject.name = 'IICoreLib'
 
 gradle.ext.mkxScriptSwitches = [
 	'ii_script_repositories': 'gradle/scripts/repositories.gradle',
@@ -29,5 +29,6 @@ gradle.ext.mkxScriptSwitches = [
 	'ii_script_spotless':     'gradle/scripts/spotless.gradle',
 	'ii_script_dependencies':      'gradle/scripts/dependencies.gradle',
 	'ii_script_corejar':      'gradle/scripts/corejar.gradle',
-	'ii_script_signing':      'gradle/scripts/signing.gradle'
+	'ii_script_signing':      'gradle/scripts/signing.gradle',
+	'ii_script_publishing':      'gradle/scripts/publishing.gradle'
 ]

@@ -1,4 +1,4 @@
-package net.iiteam.ieaddon;
+package net.iiteam.corelib;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
