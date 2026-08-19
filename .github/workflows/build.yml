@@ -74,7 +74,7 @@ jobs:
        run: chmod +x gradlew ; ./gradlew build --scan
 
      - name: Upload test build
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
          name: test-build
          path: |
@@ -84,7 +84,7 @@ jobs:
            !build/libs/*-sources.jar
 
      - name: Upload sources
-       uses: actions/upload-artifact@v3
+       uses: actions/upload-artifact@v4
        with:
          name: sources
          path: |
