@@ -1,0 +1,11 @@
+dependencies {
+	//Immersive Engineering addon baseline.
+	api rfg.deobf("blusunrize:ImmersiveEngineering:${mkxString('immersive_engineering_version')}")
+	compileOnly rfg.deobf("mezz.jei:jei_1.12.2:${mkxString('jei_version')}:api")
+	runtimeOnlyNonPublishable rfg.deobf("mezz.jei:jei_1.12.2:${mkxString('jei_version')}")
+	compileOnly rfg.deobf("CraftTweaker2:CraftTweaker2-MC1120-Main:${mkxString('crafttweaker_version')}")
+
+	//Include IE in the testing environment
+	if (mkxBool('ii_script_junit', true))
+		testImplementation rfg.deobf("blusunrize:ImmersiveEngineering:${mkxString('immersive_engineering_version')}")
+}

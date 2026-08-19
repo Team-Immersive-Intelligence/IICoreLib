@@ -1,0 +1,25 @@
+.gradle/
+build/
+out/
+run/
+run_tests/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.log
+*.hprof
+.DS_Store
+Thumbs.db
+desktop.ini
+src/main/generated/
+
+# Local/private Gradle overrides
+custom.gradle
+local.properties
+
+# Signing secrets
+*.jks
+*.keystore
+*.p12
+*.pfx
